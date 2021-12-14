@@ -1,10 +1,10 @@
 import { useState } from "react";
 const CounterButton = (props) => {
 
-    const [clickAmount, setClickAmount] = useState();
+    const [clickAmount, setClickAmount] = useState(0);
   return (
-    <button className="CounterButton">
-      You clicked me X amount of times
+    <button onClick={()=>setClickAmount(clickAmount+1)} className="CounterButton">
+     You clicked me {clickAmount} times
     </button>
   );
 };
